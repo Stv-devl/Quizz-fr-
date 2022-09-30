@@ -1,6 +1,6 @@
-# Frontend Mentor - Tip calculator app solution
+# Udemy - 20 javascript projects - Quizz app
 
-This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Quizz app from Udemy](https://www.udemy.com/course/20-projets-en-javascript/).
 
 ## Table of contents
 
@@ -9,12 +9,12 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
+
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -24,16 +24,20 @@ Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+- Manage the form.
+- Test the results.
+- Add a message in the end block based on the results.
+- Add colors according to the results.
+- Manage the possibility of a correction attempt by the user (change a value and re-validate).
 
 ### Screenshot
 
-![](./screenshot/Screenshot.png)
+![](./consignes/maquette.png)
 
 ### Links
 
-- Solution URL: [Github link](https://github.com/Stv-devl/Tip-calculator-app)
-- Live Site URL: [solution link](https://stv-devl.github.io/Tip-calculator-app/)
+- Solution URL: [Github link](https://github.com/Stv-devl/Quizz-fr-)
+- Live Site URL: [Live link]()
 
 ## My process
 
@@ -51,19 +55,8 @@ Users should be able to:
 
 I learned to practice javascript.
 
-- simple calculation for get the tip amount by people and the total amount by people.
-- button effect : when we click on a new button the other one is turn off, when we click on "custom" the button is turn off.
-- reset button : empty everything for start again
-
-I learned to practice CSS :
-
-- integrate an image inside the input
-
 ### Continued development
-
-Next will be to build a calculator for improve the calculation with JS. And build app again and again before learn React.
 
 ## Author
 
 - Website - [Github](https://github.com/Stv-devl)
-- Frontend Mentor - [@Stv-devl](https://www.frontendmentor.io/profile/Stv-devl)
