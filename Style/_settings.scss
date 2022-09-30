@@ -11,7 +11,13 @@
 
 body {
   min-height: 100vh;
-  font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #36d1dc, #5b86e5);
-  padding: clamp(20px, 5vw, 50px) 10px 10px;
+  font-family: Open sans, sans-serif;
+  font-size: 15px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: clamp(20px, 5vw, 50px) 20px 10px;
+  text-align: center;
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.7rem;
+  }
 }

@@ -11,11 +11,125 @@
 
 body {
   min-height: 100vh;
-  font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #36d1dc, #5b86e5);
-  padding: clamp(20px, 5vw, 50px) 10px 10px;
+  font-family: Open sans, sans-serif;
+  font-size: 15px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: clamp(20px, 5vw, 50px) 20px 10px;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.7rem;
+  }
 }
 
 /**********************************************************************/
 /*Main*/
-/**********************************************************************//*# sourceMappingURL=index.css.map */
+/**********************************************************************/
+h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  /********************************Media*******************************/
+  /*********************************************************************/
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+h1 span {
+  font-weight: 700;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 60%;
+  height: 180px;
+  padding: 30px;
+  border-radius: 6px;
+  background-color: rgb(244, 241, 241);
+  margin: 0 auto 15px auto;
+  box-shadow: 0px 4px 8px 0px rgba(78, 84, 94, 0.7);
+  /********************************Media*******************************/
+  /*********************************************************************/
+}
+@media screen and (max-width: 600px) {
+  .question-container {
+    width: 80%;
+  }
+}
+.question-container h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
+  /********************************Media*******************************/
+  /*********************************************************************/
+}
+@media screen and (max-width: 600px) {
+  .question-container h2 {
+    font-size: 0.8rem;
+  }
+}
+.question-container .flex-question {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  width: 150px;
+  height: 42px;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgb(254, 253, 253);
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px 0px rgba(78, 84, 94, 0.7);
+  margin: 20px auto 35px auto;
+  /********************************Media*******************************/
+  /*********************************************************************/
+}
+@media screen and (max-width: 600px) {
+  button {
+    font-size: 0.8rem;
+    width: 100px;
+    height: 40px;
+  }
+}
+
+.result {
+  width: 60%;
+  height: 60px;
+  background-color: rgb(254, 253, 253);
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px 0px rgba(78, 84, 94, 0.7);
+  margin: 0 auto 20px auto;
+  /********************************Media*******************************/
+  /*********************************************************************/
+}
+@media screen and (max-width: 600px) {
+  .result {
+    width: 80%;
+  }
+}
+.result p {
+  font-size: 1.1rem;
+  padding: 15px 0;
+  /********************************Media*******************************/
+  /*********************************************************************/
+}
+@media screen and (max-width: 600px) {
+  .result p {
+    font-size: 0.8rem;
+  }
+}
+.result p span {
+  font-weight: 700;
+}/*# sourceMappingURL=index.css.map */
