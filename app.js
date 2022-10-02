@@ -21,79 +21,100 @@ function handleForm(e) {
   const results = [];
   const radioButtons = document.querySelectorAll("input[type='radio']:checked");
 
-  //if checked reponse match with "reponses" const => true, if not false, => do array [true true true true true]
-
-  radioButtons.forEach((radioButtons, index) => {
-    if (radioButtons.value === responses[index]) {
+  //if checked reponse match with "reponses" const => true, if not false, => do array with true and false []
+  radioButtons.forEach((radioButton, index) => {
+    if (radioButton.value === responses[index]) {
       results.push(true);
     } else {
       results.push(false);
     }
-    console.log(results);
   });
 
   showResults(results);
-
-  /*addColors(results);*/
+  addColors(results);
 }
 
-const result = document.querySelector(".result");
-const support = document.querySelector(".support");
+const resultContainer = document.querySelector(".result");
+const resultText = document.querySelector(".support");
 const score = document.querySelector(".score");
 const answer = document.querySelector(".answer");
 
-console.log(support);
-
+//show result
 function showResults(results) {
   const errorsNumber = results.filter((e) => e === false).length;
 
   switch (errorsNumber) {
     case 0:
-      result.style.height = "100%";
-      support.textContent = "✔️ Bravo, c'est un sans fautes ✔️";
+      resultContainer.style.height = "100%";
+      resultText.textContent = "✔️ Bravo, c'est un sans fautes ✔️";
       score.innerHTML = "<p> Score : <span>5 / 5</span></p> ";
       answer.textContent =
         "Retentez une autre réponse dans les cases rouges, puis re-validez";
 
       break;
     case 1:
-      result.style.height = "100%";
-      support.textContent = "✨ Tu peux mieux faire ✨";
+      resultContainer.style.height = "100%";
+      resultText.textContent = "✨ Tu peux mieux faire ✨";
       score.innerHTML = "<p> Score : <span>4 / 5</span></p> ";
       answer.textContent =
         "Retentez une autre réponse dans les cases rouges, puis re-validez";
       break;
     case 2:
-      result.style.height = "100%";
-      support.textContent = "👀 Il reste quelques erreurs ✨";
+      resultContainer.style.height = "100%";
+      resultText.textContent = "👀 Il reste quelques erreurs ✨";
       score.innerHTML = "<p> Score : <span>3 / 5</span></p> ";
       answer.textContent =
         "Retentez une autre réponse dans les cases rouges, puis re-validez";
       break;
     case 3:
-      result.style.height = "100%";
-      support.textContent = "👀 Encore un effort 😭 ";
+      resultContainer.style.height = "100%";
+      resultText.textContent = "👀 Encore un effort 😭 ";
       score.innerHTML = "<p> Score : <span>2 / 5</span></p> ";
       answer.textContent =
         "Retentez une autre réponse dans les cases rouges, puis re-validez";
       break;
     case 4:
-      result.style.height = "100%";
-      support.textContent = "😭 Tu n'es pas une flèche 😭";
+      resultContainer.style.height = "100%";
+      resultText.textContent = "😭 Tu n'es pas une flèche 😭";
       score.innerHTML = "<p> Score : <span>1 / 5</span></p> ";
       answer.textContent =
         "Retentez une autre réponse dans les cases rouges, puis re-validez";
       break;
     case 5:
-      result.style.height = "100%";
-      support.textContent = "👎 Tu n'as pas inventé la poudre 👎";
+      resultContainer.style.height = "100%";
+      resultText.textContent = "👎 Tu n'as pas inventé la poudre 👎";
       score.innerHTML = "<p> Score : <span>0 / 5</span></p> ";
       answer.textContent =
         "Retentez une autre réponse dans les cases rouges, puis re-validez";
       break;
   }
-
-  console.log(errorsNumber);
 }
 
-//changer couleur de l'ensemble question vert et rouge
+const questionContainer = document.querySelectorAll(".question-container");
+
+//show result color
+function addColors(results) {
+  results.forEach((response, index) => {
+    if (results[index]) {
+      questionContainer[index].style.backgroundImage =
+        "linear-gradient(to right, #a8ff78, #78ffd6)";
+    } else {
+      questionContainer[index].style.backgroundImage =
+        "linear-gradient(to right, #f5567b, #fd674c)";
+    }
+  });
+}
+const radioInputs = document.querySelectorAll("input[type='radio']");
+
+radioInputs.forEach((radioInput) =>
+  radioInput.addEventListener("input", resetColor)
+);
+
+//reset color when we chose an other input
+function resetColor(e) {
+  const index = e.target.getAttribute("name").slice(1) - 1;
+  const parentQuestionContainer = questionContainer[index];
+
+  parentQuestionContainer.style.backgroundColor = "#f1f1f1";
+  parentQuestionContainer.style.backgroundImage = "none";
+}
