@@ -40,8 +40,8 @@ const score = document.querySelector(".score");
 const answer = document.querySelector(".answer");
 
 //show result
-function showResults(results) {
-  const errorsNumber = results.filter((e) => e === false).length;
+function showResults(result) {
+  const errorsNumber = result.filter((e) => e === false).length;
 
   switch (errorsNumber) {
     case 0:
@@ -93,9 +93,9 @@ function showResults(results) {
 const questionContainer = document.querySelectorAll(".question-container");
 
 //show result color
-function addColors(results) {
-  results.forEach((response, index) => {
-    if (results[index]) {
+function addColors(result) {
+  result.forEach((response, index) => {
+    if (result[index]) {
       questionContainer[index].style.backgroundImage =
         "linear-gradient(to right, #a8ff78, #78ffd6)";
     } else {
